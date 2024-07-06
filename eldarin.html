@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Me</title>
+    <link href="style.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>Contact Me</h1>
+      
+      <p>
+        Here you can write me a message. It will essentially send me an e-mail
+        (via <a href="https://formsubmit.co/">FormSubmit</a>), so please provide
+        sufficient context for your message, and give an e-mail address to which
+        I can respond. If you find the embeded <a href="https://quilljs.com/">text editor</a>
+        here to limiting, don’t heasitat to attach a PDF file instead.
+      </p>
+      <p id="name">— Jakob Teuber</p>
+
+
+      <div class="spacer"></div>
+
+      <form
+        action="https://formsubmit.co/dfbbc36d6395557fe1a47b8de4f35dd1"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <!-- content of response mail to the users mail  -->
+        <input type="hidden" name="_autoresponse" value="Thank you for your message!">
+
+        <!-- Use the "Box" FormSubmit-Style -->
+        <input type="hidden" name="_template" value="box">
+  
+        <label>
+          Your email (to responde to):
+          <input type="email" name="email">
+        </label>
+  
+        <label>
+          From Page:
+          <input type="text" name="from-page" id="from-page" readonly>
+        </label>
+
+        <label>
+          Subject:
+          <input type="text" name="_subject">
+        </label>
+  
+        <label>
+          Your message:
+          <div id="toolbar"></div>
+          <div id="editor"></div>
+        </label>
+  
+        <label>
+          Add an attatchment:
+          <input type="file" name="attachment">
+        </label>
+
+        <div class="spacer"></div>
+
+        <button type="submit">Send</button>
+      </form>
+    </article>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
